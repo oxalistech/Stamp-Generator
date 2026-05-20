@@ -1,0 +1,6 @@
+{
+  "name": "Invoice PDF Builder & Stamper",
+  "description": "Design sleek invoices, customize highly realistic official round/square stamps (blue or purple), and place them interactively on custom-designed or existing uploaded PDFs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

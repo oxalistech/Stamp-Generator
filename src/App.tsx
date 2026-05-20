@@ -28,14 +28,14 @@ const getTodayStampDateString = () => {
 
 // Initial Stamp variables matching realistic defaults
 const INITIAL_STAMP: StampSettings = {
-  style: 'square',
+  style: 'oval',
   colorPreset: 'blue',
   customColor: '#1d4ed8',
-  textTop: 'KIRINYAGA COUNTY BURSARY FUND',
-  textCenter1: 'WAMUMU WARD',
-  textCenter2: 'P. O. BOX 260, KUTUS',
-  textCenter3: 'Date...........  Sign.............',
-  textBottom: '',
+  textTop: 'ACME ENTERPRISES LTD',
+  textCenter1: getTodayStampDateString(),
+  textCenter2: 'Sign:...................',
+  textCenter3: '',
+  textBottom: 'contact@acme-enterprises.com',
   grungeIntensity: 45, // default to highly realistic grunge immediately
   opacity: 0.88,
   size: 260,
@@ -57,33 +57,33 @@ interface QuickStampPreset {
 
 const STAMP_PRESETS: QuickStampPreset[] = [
   {
-    name: 'Official Oval Seal (Oxalis Blue)',
+    name: 'Official Oval Seal (Blue)',
     style: 'oval',
     colorPreset: 'blue',
-    textTop: 'OXALIS TECH LTD',
-    textBottom: 'info@oxalistech.co.ke',
+    textTop: 'ACME ENTERPRISES LTD',
+    textBottom: 'contact@acme-enterprises.com',
     textCenter1: getTodayStampDateString(),
     textCenter2: 'Sign:...................',
     textCenter3: '',
   },
   {
-    name: 'Ward Bursary Committee (Blue)',
+    name: 'Community Bursary Fund (Blue)',
     style: 'square',
     colorPreset: 'blue',
-    textTop: 'KIRINYAGA COUNTY BURSARY FUND',
+    textTop: 'METROPOLIS EDUCATION TRUSTEES',
     textBottom: '',
-    textCenter1: 'WAMUMU WARD',
-    textCenter2: 'P. O. BOX 260, KUTUS',
+    textCenter1: 'CENTRAL BURSARY BOARD',
+    textCenter2: 'P. O. BOX 100, METROPOLIS',
     textCenter3: 'Date............. Sign.............',
   },
   {
-    name: 'Corporate Business Seal (Navy)',
+    name: 'Corporate Seals (Navy)',
     style: 'square',
     colorPreset: 'navy',
-    textTop: 'OXALIS TECHNOLOGIES LTD.',
+    textTop: 'GLOBAL LOGISTICS SYSTEMS',
     textBottom: 'SIGN: .......................................',
-    textCenter1: '100 INNOVATION WAY, TECH REGION',
-    textCenter2: 'PHONE: +1 (555) 019-2831',
+    textCenter1: '888 COMMERCE BLVD, SECTOR 7',
+    textCenter2: 'PHONE: +1 (555) 099-1234',
     textCenter3: 'DATE: .......................................',
   },
 ];
@@ -313,7 +313,7 @@ export default function App() {
                     value={stampSettings.textTop}
                     onChange={(e) => setStampSettings({ ...stampSettings, textTop: e.target.value })}
                     className="w-full p-2 text-sm border border-slate-200 rounded-md focus:ring-2 focus:ring-indigo-500 outline-none bg-white font-medium"
-                    placeholder="e.g. KIRINYAGA COUNTY BURSARY FUND"
+                    placeholder="e.g. ACME ENTERPRISES LTD"
                   />
                 </div>
 
@@ -326,7 +326,7 @@ export default function App() {
                     value={stampSettings.textCenter1}
                     onChange={(e) => setStampSettings({ ...stampSettings, textCenter1: e.target.value })}
                     className="w-full p-2 text-sm border border-slate-200 rounded-md focus:ring-2 focus:ring-indigo-500 outline-none bg-white font-medium"
-                    placeholder="e.g. WAMUMU WARD"
+                    placeholder="e.g. CENTRAL BURSARY BOARD"
                   />
                 </div>
 
@@ -339,7 +339,7 @@ export default function App() {
                     value={stampSettings.textCenter2}
                     onChange={(e) => setStampSettings({ ...stampSettings, textCenter2: e.target.value })}
                     className="w-full p-2 text-sm border border-slate-200 rounded-md focus:ring-2 focus:ring-indigo-500 outline-none bg-white font-medium"
-                    placeholder="e.g. P. O. BOX 260, KUTUS"
+                    placeholder="e.g. P. O. BOX 100, METROPOLIS"
                   />
                 </div>
 
@@ -365,7 +365,7 @@ export default function App() {
                     value={stampSettings.textBottom}
                     onChange={(e) => setStampSettings({ ...stampSettings, textBottom: e.target.value })}
                     className="w-full p-2 text-sm border border-slate-200 rounded-md focus:ring-2 focus:ring-indigo-500 outline-none bg-white font-medium"
-                    placeholder="e.g. SIGN: ......................................."
+                    placeholder="e.g. contact@acme-enterprises.com"
                   />
                 </div>
               </div>
